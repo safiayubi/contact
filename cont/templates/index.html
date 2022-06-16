@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{%load staticfiles%}
+
+{%block title%} HOME Contact {%endblock title %}
+
+{%block body %}
+
+<style>
+  #hea {
+    
+    text-align: center;
+
+  }
+  #btn{
+
+    text-align: center;
+  }
+
+  
+ </style>
+
+</nav>
+<nav id='hea'>
+<h1 id='j' >Contact Form</h1>
+</nav>
+<div class= 'container'>
+<form method="post" action="">
+  {% csrf_token %}
+<div class="mb-3">
+  <label for="name" class="form-label">Email address</label>
+  <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
+</div>
+<div class="mb-3">
+  <label for="email" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+</div>
+<div class="mb-3">
+  <label for="phone" class="form-label">Email address</label>
+  <input type="text" class="form-control" id="phone"  name="phone" placeholder="004915175379815">
+</div>
+<div class="mb-3">
+  <label for="messege" class="form-label">Example textarea</label>
+  <textarea class="form-control" id="message" name="message" rows="3" placeholder="What is in your Mind  ....."></textarea>
+</div>
+<div id="btn"> 
+<button type="Submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+</div>
+</form>
+
+</div>
+
+
+{%endblock body %}
+
